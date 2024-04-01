@@ -2,7 +2,6 @@ package Algoritms
 
 import (
 	"fmt"
-	"math"
 )
 
 func Min2MaxArray(arr []int) (int, int) {
@@ -21,21 +20,17 @@ func Min2MaxArray(arr []int) (int, int) {
 }
 
 func Test4() {
-	var n, k int
+	var n, k, a int
 	fmt.Scan(&n, k)
-	a := make([]int, n)
-
-	hash := make(map[int]int)
-
+	hash := make(map[uint8]uint8)
 	// В процессе записи сразу запишем возможные операции в hash таблицу
 	for i := 0; i < n; i++ {
-		fmt.Scan(&(a[i]))
-		for j := 9; j >= 0; j-- {
-			if 90 > a[i]/int(math.Pow10(j-1)) && (a[i]/int(math.Pow10(j-1)) > 9) {
-				hash[j] = a[i]
-			}
+		fmt.Scan(&a)
+		if k > 0 {
+
 		}
 	}
+
 	// Ну и
 	//var ans int64
 	for i := 0; i <= k; i++ {

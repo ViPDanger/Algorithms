@@ -6,5 +6,4 @@ import (
 
 func main() {
 	alg.Test4()
-
 }
