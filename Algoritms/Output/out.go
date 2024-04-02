@@ -1,20 +1,22 @@
 package Output
 
 import (
+	"fmt"
 	"os"
 )
 
 func Scan(a ...any) (n int, err error) {
-	const filename = "out.txt"
-
-data := make([]byte, 1024)
-	file, err := os.Open(filenme)
-	file_size, err := file.Read(daa)
-
-return n, err
+	const filename = "buffer.txt"
+	file, err := os.Open(filename)
+	if err != nil {
+		panic(err)
+		n, err = fmt.Fscan(file, a)
+		os.Close(filename)
+	}
+	return n, err
 }
 
 func Println(a ...any) (n int, err error) {
-	mt.Println(a)
+	fmt.Println(a)
 	return n, err
 }
