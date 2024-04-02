@@ -2,29 +2,14 @@ package Output
 
 import (
 	"fmt"
-	"os"
+	"strings"
 )
 
+var Str string
+
 func Scan(a ...any) (n int, err error) {
-	const filename = "Algoritms/Output/buffer.txt"
-	file, err := os.OpenFile(filename, os.O_RDWR, 0644)
-	if err != nil {
-		panic(err)
-	}
-	n, err = fmt.Fscan(file, a)
-	defer file.Close()
-
-	return n, err
-}
-
-func PrintBuff(a ...any) (n int, err error) {
-	const filename = "Algoritms/Output/buffer.txt"
-	file, err := os.OpenFile(filename, os.O_RDWR, 0644)
-	if err != nil {
-		panic(err)
-	}
-	n, err = fmt.Fprint(file, a)
-	defer file.Close()
+	reader := strings.NewReader(Str)
+	n, err = fmt.Fscanln(reader, a)
 
 	return n, err
 }

@@ -6,9 +6,6 @@ import (
 )
 
 func main() {
-
-	for i := 2; i < 20; i++ {
-		buf.PrintBuff(i)
-	}
+	buf.Str = "3 1 3 1"
 	alg.Test7()
 }
