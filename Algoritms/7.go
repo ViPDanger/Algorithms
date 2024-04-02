@@ -1,6 +1,6 @@
 package Algoritms
 
-import "fmt"
+import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritmic/Output"
 
 type stud struct {
 	b bool   // Ссылаются ли на этого ученика
