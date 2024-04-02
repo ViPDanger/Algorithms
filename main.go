@@ -1,19 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"os"
-	"strconv"
-
 	alg "github.com/ViPDanger/AlgoritmicProblems/Algoritms"
+	buf "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 )
 
 func main() {
 
-	alg.Test7()
-	fmt.Println("Вупа вупа")
-	for i := 3; i < 100; i++ {
-		os.Stdin.Write([]byte(strconv.Itoa(i)))
+	for i := 2; i < 20; i++ {
+		buf.PrintBuff(i)
 	}
-
+	alg.Test7()
 }

@@ -11,12 +11,14 @@ func Test7() {
 
 	var n, i, j, count, no_count, a uint32
 	fmt.Scan(&n)
+	fmt.Println(n)
 	count = 0
 	no_count = 0
 	ai := make([]stud, n+1)
 	// Вычисление единственного
 	for i = 1; i <= n; i++ {
 		fmt.Scan(&a)
+
 		(ai[i]).a = a
 		// Если на это число уже ссылались - мы записываем номер
 		if ai[a].b {
