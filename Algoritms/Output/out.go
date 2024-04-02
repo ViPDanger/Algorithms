@@ -10,13 +10,14 @@ func Scan(a ...any) (n int, err error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		panic(err)
-		n, err = fmt.Fscan(file, a)
-		os.Close(filename)
 	}
-	return n, err
-}
+	n, err = fmt.Fscan(file, a)
+	defer file.Close()
+	
+	eturn n, err
 
-func Println(a ...any) (n int, err error) {
-	fmt.Println(a)
-	return n, err
+
+func Println(a ..any) (n int, err error) {
+	fmt.Println(a
+	eturn n, err
 }
