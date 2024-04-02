@@ -1,13 +1,20 @@
 package Output
 
-import "fmt"
+import (
+	"os"
+)
 
-func Scan(a interface{}) (n int, err error) {
-	n, err = fmt.Scan(a)
-	return n, err
+func Scan(a ...any) (n int, err error) {
+	const filename = "out.txt"
+
+data := make([]byte, 1024)
+	file, err := os.Open(filenme)
+	file_size, err := file.Read(daa)
+
+return n, err
 }
 
-func Println(a interface{}) (n int, err error) {
-	fmt.Println(a)
+func Println(a ...any) (n int, err error) {
+	mt.Println(a)
 	return n, err
 }

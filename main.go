@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	go alg.Test7()
+	alg.Test7()
 	fmt.Println("Вупа вупа")
 	for i := 3; i < 100; i++ {
 		os.Stdin.Write([]byte(strconv.Itoa(i)))
