@@ -2,41 +2,44 @@ package Algoritms
 
 import (
 	"fmt"
+	"math"
 )
 
-func Min2MaxArray(arr []int) (int, int) {
-	max := arr[0]
-	min := max
-	for i := 0; i <= len(arr)-1; i++ {
-		if arr[max] < arr[i] {
-			max = i
-		}
-		if arr[min] > arr[i] {
-			min = i
-		}
-	}
-	return min, max
-
-}
-
 func Test4() {
-	var n, k, a int
-	fmt.Scan(&n, k)
-	hash := make(map[uint8]uint8)
-	// В процессе записи сразу запишем возможные операции в hash таблицу
+	var n, a int
+	var j uint8
+	var i, k uint
+	var ans uint64
+	fmt.Scan(&n, &k)
+	a_op := make(map[uint8][]uint, 10)
+	for j = 0; j < 10; j++ {
+		a_op[j] = make([]uint, 10)
+
+	}
+
+	// В процессе записи сразу запишем количество каждой возможной операции в таблицу
 	for i := 0; i < n; i++ {
 		fmt.Scan(&a)
-		if k > 0 {
+		for j = 0; a > 0; j++ {
+			a_op[j][9-a%10] += 1
+			a = a / 10
 
 		}
 	}
 
-	// Ну и
-	//var ans int64
-	for i := 0; i <= k; i++ {
-		//	sort.Ints()
+	for j = 9; j < math.MaxUint8 && k > 0; j-- {
+		for i = 8; i < math.MaxUint8 && k > 0; i-- {
+
+			if a_op[j][i] != 0 {
+				if k < a_op[j][i] {
+					a_op[j][i] = k
+				}
+				ans += uint64(i*a_op[j][i]) * uint64(math.Pow10(int(j)))
+				k -= a_op[j][i]
+
+			}
+
+		}
 	}
-	for _, k := range keys {
-		fmt.Println(k, m[k])
-	}
+	fmt.Println(ans)
 }

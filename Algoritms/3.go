@@ -4,44 +4,32 @@ import (
 	"fmt"
 )
 
-// Функция возвращает индексы Min Max
-
-func MinMaxArray(arr []int) (int, int) {
-	max := arr[0]
-	min := max
-	for i := 0; i <= len(arr)-1; i++ {
-		if arr[max] < arr[i] {
-			max = i
-		}
-		if arr[min] > arr[i] {
-			min = i
-		}
-	}
-	return min, max
-
-}
-
 func Test3() {
 	var n, t, nt int
 
 	// Считывание переменных
 	fmt.Scanln(&n, &t)
-
 	arr := make([]int, n)
+	fmt.Scan(&(arr[0]))
+	min := arr[0]
+	max := min
 
-	for i := 0; i < n; i++ {
+	// При считывании массива сразу найдём в нём минимум и максимум
+	for i := 1; i < n; i++ {
+
 		fmt.Scan(&(arr[i]))
+		if max < arr[i] {
+			max = arr[i]
+		} else if min > arr[i] {
+			min = arr[i]
+		}
 	}
 	fmt.Scan(&nt)
 
 	nt = nt - 1
-	min, max := MinMaxArray(arr)
-	min = arr[min]
-	max = arr[max]
-
 	// Вывод данных
 	// Если мы не успеваем ни с минимума, ни с максиумума, то будем идти от точки nt.
-	if (max-arr[nt] > t) && (arr[nt]-min > t) {
+	if (max-arr[nt] <= t) || (arr[nt]-min <= t) {
 		fmt.Println(max - min)
 	} else if (2*max - min - arr[nt]) < (max - 2*min + arr[nt]) {
 		fmt.Println(2*max - min - arr[nt])

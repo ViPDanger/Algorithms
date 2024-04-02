@@ -2,13 +2,11 @@ package Algoritms
 
 import (
 	"fmt"
+	"math"
 )
 
 func Test2() {
-	var a, i int
+	var a int32
 	fmt.Scan(&a)
-	for i = 0; a > 1; i++ {
-		a = a/2 + a%2
-	}
-	fmt.Println(i)
+	fmt.Println(math.Ceil(math.Log2(float64(a))))
 }

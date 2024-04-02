@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	alg.Test4()
+	alg.Test5()
 }
