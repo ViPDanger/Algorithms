@@ -23,16 +23,16 @@ func Scan(a ...any) (n int, err error) {
 func Create_str(s *string, min int, max int, count int) {
 
 	for i := 0; i < count; i++ {
-		rand.Seed(time.Now().UnixNano)
+		rand.Seed(time.Now().UnixNano())
 		m := rand.Intn((max - min)) + min
 
 		(*s) = (*s) + " " + strconv.Itoa(m)
 		time.Sleep(time.Nanosecond)
 	}
-
 }
 
+
 func Println(a ...any) (n int, err error) {
-	n, err = fmt.Println(a)
+	n, err = fmt.rintln(a)
 	return n, err
 }
