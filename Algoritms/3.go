@@ -1,14 +1,12 @@
 package Algoritms
 
-import (
-	"fmt"
-)
+import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 
 func Test3() {
 	var n, t, nt int
 
 	// Считывание переменных
-	fmt.Scanln(&n, &t)
+	fmt.Scan(&n, &t)
 	arr := make([]int, n)
 	fmt.Scan(&(arr[0]))
 	min := arr[0]

@@ -1,7 +1,7 @@
 package Algoritms
 
 import (
-	"fmt"
+	fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 )
 
 func Test1() {

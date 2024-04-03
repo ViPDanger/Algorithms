@@ -1,6 +1,6 @@
 package Algoritms
 
-import "fmt"
+import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 
 func Test5() {
 	var l, r, x uint64
