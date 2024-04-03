@@ -19,5 +19,9 @@ func Test6() {
 			}
 		}
 	}
+	if m2 == -1 {
+		fmt.Println(-1, -1)
+		return
+	}
 	fmt.Println(m2, m1)
 }

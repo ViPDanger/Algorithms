@@ -1,7 +1,6 @@
 package main
 
 import (
-	"strconv"
 	"time"
 
 	alg "github.com/ViPDanger/AlgoritmicProblems/Algoritms"
@@ -9,11 +8,12 @@ import (
 )
 
 func main() {
-	str := strconv.Itoa(1)
-	buf.Create_str(&str, 1, 500, 500)
+	str := "999 9999"
+    buf.Create_str(&str, 1, 10000000, 999)
+	print(str)
 	buf.Str = str
 	time1 := time.Now()
-	alg.Test2()
+	alg.Test4()
 	println(time.Since(time1).String())
 
 }

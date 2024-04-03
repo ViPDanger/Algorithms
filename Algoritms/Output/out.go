@@ -31,8 +31,7 @@ func Create_str(s *string, min int, max int, count int) {
 	}
 }
 
-
 func Println(a ...any) (n int, err error) {
-	n, err = fmt.rintln(a)
+	n, err = fmt.Println(a)
 	return n, err
 }
