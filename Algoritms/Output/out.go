@@ -20,6 +20,17 @@ func Scan(a ...any) (n int, err error) {
 	return n, err
 }
 
+func Scanf(f string,a ...any) (n int, err error) {
+	for _, i := range a {
+		n, err = fmt.Fscanf(strings.NewReader(Str),f, i)
+		Str = strings.Join(strings.Split(Str, " ")[1:], " ")
+
+	}
+
+	return n, err
+}
+
+
 func Create_str(s *string, min int, max int, count int) {
 
 	for i := 0; i < count; i++ {
@@ -27,6 +38,15 @@ func Create_str(s *string, min int, max int, count int) {
 		m := rand.Intn((max - min)) + min
 
 		(*s) = (*s) + " " + strconv.Itoa(m)
+		time.Sleep(time.Nanosecond)
+	}
+}
+
+func Create_int(s *[]int, min int, max int, count int) {
+
+	for i := 0; i < count; i++ {
+		rand.Seed(time.Now().UnixNano())
+		*s = append(*s,rand.Intn((max - min)) + min)
 		time.Sleep(time.Nanosecond)
 	}
 }

@@ -1,4 +1,4 @@
-package Algoritms
+package Tinkoff
 
 import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 

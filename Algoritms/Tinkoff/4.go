@@ -1,4 +1,4 @@
-package Algoritms
+package Tinkoff
 
 import (
 	"math"

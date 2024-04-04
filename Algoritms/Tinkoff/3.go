@@ -1,10 +1,9 @@
-package Algoritms
+package Tinkoff
 
 import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 
 func Test3() {
 	var n, t, nt int
-
 	// Считывание переменных
 	fmt.Scan(&n, &t)
 	arr := make([]int, n)
@@ -13,7 +12,7 @@ func Test3() {
 	max := min
 
 	// При считывании массива сразу найдём в нём минимум и максимум
-	for i := 1; i < n; i++ {
+	for i := 1; i <= n; i++ {
 
 		fmt.Scan(&(arr[i]))
 		if max < arr[i] {
@@ -29,7 +28,7 @@ func Test3() {
 	// Если мы не успеваем ни с минимума, ни с максиумума, то будем идти от точки nt.
 	if (max-arr[nt] <= t) || (arr[nt]-min <= t) {
 		fmt.Println(max - min)
-	} else if (2*max - min - arr[nt]) < (max - 2*min + arr[nt]) {
+	} else if (max - arr[nt]) < (arr[nt] - min) {
 		fmt.Println(2*max - min - arr[nt])
 	} else {
 		fmt.Println(max - 2*min + arr[nt])

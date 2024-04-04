@@ -1,19 +1,27 @@
 package main
 
 import (
+	"fmt"
 	"time"
 
-	alg "github.com/ViPDanger/AlgoritmicProblems/Algoritms"
-	buf "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
+	l "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Letcode"
 )
 
 func main() {
-	str := "999 9999"
-    buf.Create_str(&str, 1, 10000000, 999)
-	print(str)
-	buf.Str = str
+	var xln,yln *l.ListNode
+	x := make([]l.ListNode,10)
+	y := make([]l.ListNode,10)
+	for i:=9;i>=0;i--{
+		 x[i] = l.ListNode{Val:i,Next:xln}
+		 xln = &x[i]
+		 y[i] = l.ListNode{Val:i+1,Next:yln}
+		 yln = &y[i]
+	} 
+
+	s := []int{1,1,2}
+	fmt.Println(s)
 	time1 := time.Now()
-	alg.Test4()
+	fmt.Println(l.MergeTwoLists(xln,yln))
 	println(time.Since(time1).String())
 
 }
