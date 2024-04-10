@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ViPDanger/AlgoritmicProblems/Algoritms/basic"
+	tinkoff "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Tinkoff"
 	l "github.com/ViPDanger/AlgoritmicProblems/Algoritms/letcode"
 	output "github.com/ViPDanger/AlgoritmicProblems/Algoritms/output"
 )
@@ -23,14 +23,16 @@ func lists() {
 }
 
 func main() {
-	s := make([]int, 0)
-	output.Create_int(&s, 1, 999, 5000000)
-	//fmt.Println(s)
+	var s string
+	output.Create_str(&s, 1, 999, 10)
+	output.Str = s
+	fmt.Println(s)
 	time1 := time.Now()
 	//v := "asdasdkhfuygqywe819361jkfdngkajhijahsd71236nvosof"
 	//fmt.Println(s)
-	basic.QuickSort(s)
-
+	output.PrintMemUsage()
+	tinkoff.Test3()
+	
 	fmt.Printf("%f %s \n", float64(time.Since(time1).Nanoseconds())/1000000000., " s")
 	output.PrintMemUsage()
 	//fmt.Println(s)

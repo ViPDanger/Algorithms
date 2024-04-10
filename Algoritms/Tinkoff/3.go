@@ -12,9 +12,10 @@ func Test3() {
 	max := min
 
 	// При считывании массива сразу найдём в нём минимум и максимум
+	fmt.Scan((&arr))
 	for i := 1; i <= n; i++ {
 
-		fmt.Scan(&(arr[i]))
+		
 		if max < arr[i] {
 			max = arr[i]
 		} else if min > arr[i] {

@@ -7,7 +7,7 @@ import (
 )
 
 func Test2() {
-	var a uint32
+	var a uint64
 	fmt.Scan(&a)
 	fmt.Println(math.Ceil(math.Log2(float64(a))))
 }
