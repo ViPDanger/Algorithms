@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	output "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 	"github.com/ViPDanger/AlgoritmicProblems/Algoritms/basic"
 	l "github.com/ViPDanger/AlgoritmicProblems/Algoritms/letcode"
+	output "github.com/ViPDanger/AlgoritmicProblems/Algoritms/output"
 )
 
 func lists() {
@@ -24,13 +24,15 @@ func lists() {
 
 func main() {
 	s := make([]int, 0)
-	output.Create_int(&s, 1, 50, 1000000)
+	output.Create_int(&s, 1, 999, 5000000)
 	//fmt.Println(s)
 	time1 := time.Now()
 	//v := "asdasdkhfuygqywe819361jkfdngkajhijahsd71236nvosof"
 	//fmt.Println(s)
-	basic.DictionarySort(s, 99)
-	fmt.Printf("%f", float64(time.Since(time1).Nanoseconds())/1000000000.)
+	basic.QuickSort(s)
+
+	fmt.Printf("%f %s \n", float64(time.Since(time1).Nanoseconds())/1000000000., " s")
+	output.PrintMemUsage()
 	//fmt.Println(s)
 
 }

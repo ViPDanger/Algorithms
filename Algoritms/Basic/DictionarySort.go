@@ -1,5 +1,7 @@
 package basic
 
+import "github.com/ViPDanger/AlgoritmicProblems/Algoritms/output"
+
 func DictionarySort(a []int, k int) []int {
 	map_a := make(map[int]int)
 	for i := range a {
@@ -14,5 +16,6 @@ func DictionarySort(a []int, k int) []int {
 		}
 
 	}
+	output.PrintMemUsage()
 	return a
 }

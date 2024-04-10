@@ -3,6 +3,7 @@ package output
 import (
 	"fmt"
 	"math/rand"
+	"runtime"
 	"strconv"
 	"strings"
 	"time"
@@ -39,6 +40,20 @@ func Create_str(s *string, min int, max int, count int) {
 		(*s) = (*s) + " " + strconv.Itoa(m)
 		time.Sleep(time.Nanosecond)
 	}
+}
+
+func bToMb(b uint64) uint64 {
+	return b / 1024 / 1024
+}
+
+func PrintMemUsage() {
+	var m runtime.MemStats
+	runtime.ReadMemStats(&m)
+	// For info on each, see: /pkg/runtime/#MemStats
+	fmt.Printf("Alloc = %v MiB", bToMb(m.Alloc))
+	fmt.Printf("\tTotalAlloc = %v MiB", bToMb(m.TotalAlloc))
+	fmt.Printf("\tSys = %v MiB", bToMb(m.Sys))
+	fmt.Printf("\tNumGC = %v\n", m.NumGC)
 }
 
 func Create_int(s *[]int, min int, max int, count int) {
