@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	l "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Letcode"
-	"github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
+	output "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
 	"github.com/ViPDanger/AlgoritmicProblems/Algoritms/basic"
+	l "github.com/ViPDanger/AlgoritmicProblems/Algoritms/letcode"
 )
 
 func lists() {
@@ -24,7 +24,7 @@ func lists() {
 
 func main() {
 	s := make([]int, 0)
-	Output.Create_int(&s, 1, 99, 10)
+	output.Create_int(&s, 1, 99, 10)
 	fmt.Println(s)
 	time1 := time.Now()
 	fmt.Println(basic.QuickSortStr("asdasdkhfuygqywe819361jkfdngkajhijahsd71236nvosof"))

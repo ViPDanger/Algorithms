@@ -1,4 +1,4 @@
-package Letcode
+package letcode
 
 func compare(r rune, b rune) bool {
 	if r == b {

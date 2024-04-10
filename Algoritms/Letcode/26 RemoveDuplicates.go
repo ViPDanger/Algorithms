@@ -1,4 +1,4 @@
-package Letcode
+package letcode
 
 func RemoveDuplicates(nums []int) int {
 	n_map := make(map[int]bool, len(nums))

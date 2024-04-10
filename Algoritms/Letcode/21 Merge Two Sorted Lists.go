@@ -1,4 +1,4 @@
-package Letcode
+package letcode
 
 type ListNode struct {
 	Val  int

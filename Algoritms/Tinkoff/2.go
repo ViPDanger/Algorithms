@@ -1,4 +1,4 @@
-package Tinkoff
+package tinkoff
 
 import (
 	"math"
