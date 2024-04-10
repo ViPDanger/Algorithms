@@ -24,10 +24,13 @@ func lists() {
 
 func main() {
 	s := make([]int, 0)
-	output.Create_int(&s, 1, 99, 10)
-	fmt.Println(s)
+	output.Create_int(&s, 1, 50, 1000000)
+	//fmt.Println(s)
 	time1 := time.Now()
-	fmt.Println(basic.QuickSortStr("asdasdkhfuygqywe819361jkfdngkajhijahsd71236nvosof"))
-	println(time.Since(time1).String())
+	//v := "asdasdkhfuygqywe819361jkfdngkajhijahsd71236nvosof"
+	//fmt.Println(s)
+	basic.DictionarySort(s, 99)
+	fmt.Printf("%f", float64(time.Since(time1).Nanoseconds())/1000000000.)
+	//fmt.Println(s)
 
 }

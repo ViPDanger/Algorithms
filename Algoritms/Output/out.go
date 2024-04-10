@@ -46,7 +46,7 @@ func Create_int(s *[]int, min int, max int, count int) {
 	for i := 0; i < count; i++ {
 		rand.Seed(time.Now().UnixNano())
 		*s = append(*s, rand.Intn((max-min))+min)
-		time.Sleep(time.Nanosecond)
+		//time.Sleep(time.Nanosecond)
 	}
 }
 
