@@ -15,8 +15,10 @@ func QuickSort(a []int) []int {
 	a[wall], a[len(a)-1] = a[len(a)-1], a[wall]
 	return append(QuickSort(a[:wall]), QuickSort(a[wall:])...)
 }
-
-func QuickSortStr(a []rune) []rune {
+func QuickSortStr(str string) string {
+	return string(quicksortrune([]rune(str)))
+}
+func quicksortrune(a []rune) []rune {
 	if len(a) < 2 {
 		return a
 	}
@@ -29,5 +31,5 @@ func QuickSortStr(a []rune) []rune {
 		}
 	}
 	a[wall], a[len(a)-1] = a[len(a)-1], a[wall]
-	return append(QuickSortStr(a[:wall]), QuickSortStr(a[wall:])...)
+	return append(quicksortrune(a[:wall]), quicksortrune(a[wall:])...)
 }

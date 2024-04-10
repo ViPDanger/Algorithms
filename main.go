@@ -27,7 +27,7 @@ func main() {
 	Output.Create_int(&s, 1, 99, 10)
 	fmt.Println(s)
 	time1 := time.Now()
-	fmt.Println(basic.QuickSort(s))
+	fmt.Println(basic.QuickSortStr("asdasdkhfuygqywe819361jkfdngkajhijahsd71236nvosof"))
 	println(time.Since(time1).String())
 
 }
