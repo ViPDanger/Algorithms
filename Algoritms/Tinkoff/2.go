@@ -3,7 +3,7 @@ package tinkoff
 import (
 	"math"
 
-	fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
+	fmt "github.com/ViPDanger/AlgoritmicProblems/algoritms/output"
 )
 
 func Test2() {

@@ -1,6 +1,6 @@
 package tinkoff
 
-import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
+import fmt "github.com/ViPDanger/AlgoritmicProblems/algoritms/output"
 
 type stud struct {
 	b bool   // Ссылаются ли на этого ученика

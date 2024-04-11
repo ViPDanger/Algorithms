@@ -66,6 +66,6 @@ func Create_int(s *[]int, min int, max int, count int) {
 }
 
 func Println(a ...any) (n int, err error) {
-	n, err = fmt.Println(a)
+	n, err = fmt.Println(a...)
 	return n, err
 }

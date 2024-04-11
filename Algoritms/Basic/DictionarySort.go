@@ -1,6 +1,6 @@
 package basic
 
-import "github.com/ViPDanger/AlgoritmicProblems/Algoritms/output"
+import "github.com/ViPDanger/AlgoritmicProblems/algoritms/output"
 
 func DictionarySort(a []int, k int) []int {
 	map_a := make(map[int]int)

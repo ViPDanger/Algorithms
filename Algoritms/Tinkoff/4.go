@@ -3,7 +3,7 @@ package tinkoff
 import (
 	"math"
 
-	fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
+	fmt "github.com/ViPDanger/AlgoritmicProblems/algoritms/output"
 )
 
 func Test4() {
@@ -28,8 +28,8 @@ func Test4() {
 		}
 	}
 
-	for j = 9; j < math.MaxUint8 && k > 0; j-- {
-		for i = 8; i < math.MaxUint8 && k > 0; i-- {
+	for j = 9; j < 255 && k > 0; j-- {
+		for i = 8; i < 255 && k > 0; i-- {
 
 			if a_op[j][i] != 0 {
 				if k < a_op[j][i] {

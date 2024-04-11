@@ -1,6 +1,6 @@
 package tinkoff
 
-import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
+import fmt "github.com/ViPDanger/AlgoritmicProblems/algoritms/output"
 
 func Test5() {
 	var l, r, x uint64

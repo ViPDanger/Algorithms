@@ -1,21 +1,20 @@
 package tinkoff
 
-import fmt "github.com/ViPDanger/AlgoritmicProblems/Algoritms/Output"
+import fmt "github.com/ViPDanger/AlgoritmicProblems/algoritms/output"
 
 func Test3() {
-	var n, t, nt int
+	var n, t, nt,i uint8
 	// Считывание переменных
 	fmt.Scan(&n, &t)
-	arr := make([]int, n)
+	arr := make([]uint8, n)
 	fmt.Scan(&(arr[0]))
 	min := arr[0]
 	max := min
 
 	// При считывании массива сразу найдём в нём минимум и максимум
-	fmt.Scan((&arr))
-	for i := 1; i <= n; i++ {
-
-		
+	
+	for i = 1; i < n; i++ {
+		fmt.Scan((&arr[i]))
 		if max < arr[i] {
 			max = arr[i]
 		} else if min > arr[i] {
